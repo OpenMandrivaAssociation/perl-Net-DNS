@@ -14,6 +14,7 @@ Source:		http://www.cpan.org/modules/by-module/Net/%{module}-%{version}.tar.bz2
 BuildRequires:	perl-devel
 BuildRequires:	perl(Digest::HMAC)
 BuildRequires:	perl(Net::IP)
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Net::DNS is a collection of Perl modules that act as a Domain Name System (DNS)
