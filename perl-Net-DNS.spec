@@ -1,6 +1,6 @@
 %define module	Net-DNS
 %define name	perl-%{module}
-%define version	0.64
+%define version	0.65
 %define release	%mkrel 1
 
 Name:		%{name}
