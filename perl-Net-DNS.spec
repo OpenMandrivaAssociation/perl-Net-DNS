@@ -14,6 +14,9 @@ Source:		http://www.cpan.org/modules/by-module/Net/%{module}-%{version}.tar.bz2
 BuildRequires:	perl-devel
 BuildRequires:	perl(Digest::HMAC)
 BuildRequires:	perl(Net::IP)
+BuildRequires:	perl(MIME::Base32)
+BuildRequires:	perl(IO::Socket::INET6)
+BuildRequires:	perl(Socket6)
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
