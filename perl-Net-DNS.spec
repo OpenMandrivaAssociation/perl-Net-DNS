@@ -1,22 +1,22 @@
-%define module	Net-DNS
-%define name	perl-%{module}
-%define version	0.65
-%define release	%mkrel 2
+%define upstream_name	 Net-DNS
+%define upstream_version 0.65
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Perl interface to the DNS resolver
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source:		http://www.cpan.org/modules/by-module/Net/%{module}-%{version}.tar.bz2
-BuildRequires:	perl-devel
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	perl(Digest::HMAC)
 BuildRequires:	perl(Net::IP)
 BuildRequires:	perl(IO::Socket::INET6)
 BuildRequires:	perl(Socket6)
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRequires:	perl-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Net::DNS is a collection of Perl modules that act as a Domain Name System (DNS)
@@ -27,7 +27,7 @@ The programmer should be somewhat familiar with the format of a DNS packet and
 its various sections. See RFC 1035 or DNS and BIND (Albitz & Liu) for details.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor < /dev/null
@@ -49,4 +49,3 @@ rm -rf %{buildroot}
 %{_mandir}/*/*
 %{perl_vendorarch}/auto/Net
 %{perl_vendorarch}/Net
-
