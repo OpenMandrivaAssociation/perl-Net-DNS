@@ -1,5 +1,5 @@
 %define upstream_name	 Net-DNS
-%define upstream_version 0.65
+%define upstream_version 0.66
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary:	Perl interface to the DNS resolver
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl(Digest::HMAC)
 BuildRequires:	perl(Net::IP)
