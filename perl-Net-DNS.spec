@@ -13,6 +13,7 @@ Source0:	http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_v
 
 BuildRequires:	perl(Digest::HMAC)
 BuildRequires:	perl(Net::IP)
+BuildRequires:	perl(Digest::SHA)
 BuildRequires:	perl(IO::Socket::INET6)
 BuildRequires:	perl(Socket6)
 BuildRequires:	perl-devel
