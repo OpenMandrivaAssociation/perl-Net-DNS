@@ -1,2 +1,4 @@
+removed_sources:
+  Net-DNS-0.68.tar.gz: 4deaaa8ba6bca0cf0e248b4a3cc0383348349182
 sources:
-  "Net-DNS-0.68.tar.gz": 4deaaa8ba6bca0cf0e248b4a3cc0383348349182
+  Net-DNS-0.74.tar.gz: 1b183448d22ea49bca0c4b85c365af527101a2ae
