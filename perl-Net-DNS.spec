@@ -26,8 +26,8 @@ its various sections. See RFC 1035 or DNS and BIND (Albitz & Liu) for details.
 
 %prep
 %setup -qn %{modname}-%{modver}
-rm -f lib/Net/DNS/Resolver/Win32.pm
-sed -i -e '/Win32.pm/d' MANIFEST
+rm -f lib/Net/DNS/Resolver/MSWin32.pm
+sed -i -e '/MSWin32.pm/d' MANIFEST
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
