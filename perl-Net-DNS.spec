@@ -1,14 +1,15 @@
 %define modname	Net-DNS
-%define modver 0.75
+%define modver 0.76
 
 Summary:	Perl interface to the DNS resolver
+
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	2
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Net/Net-DNS-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Net/%{modname}-%{modver}.tar.gz
 BuildRequires:	perl(Digest::HMAC)
 BuildRequires:	perl(Net::IP)
 BuildRequires:	perl(Digest::SHA)
@@ -44,5 +45,6 @@ sed -i -e '/MSWin32.pm/d' MANIFEST
 %{perl_vendorarch}/auto/Net
 %{perl_vendorarch}/Net
 %{_mandir}/man3/*
+
 
 
