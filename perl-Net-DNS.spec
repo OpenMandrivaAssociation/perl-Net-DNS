@@ -1,5 +1,5 @@
 %define modname	Net-DNS
-%define modver 0.77
+%define modver 0.79
 
 Summary:	Perl interface to the DNS resolver
 
