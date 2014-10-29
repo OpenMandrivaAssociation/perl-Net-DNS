@@ -1,11 +1,11 @@
 %define modname	Net-DNS
-%define modver 0.79
+%define modver 0.80
 
 Summary:	Perl interface to the DNS resolver
 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	3
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
