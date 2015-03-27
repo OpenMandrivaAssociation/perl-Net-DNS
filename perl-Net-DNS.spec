@@ -1,11 +1,11 @@
 %define modname	Net-DNS
-%define modver 0.81
+%define modver 0.83
 
 Summary:	Perl interface to the DNS resolver
 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	2
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -31,7 +31,7 @@ rm -f lib/Net/DNS/Resolver/MSWin32.pm
 sed -i -e '/MSWin32.pm/d' MANIFEST
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make OPTIMIZE="%{optflags}"
 
 %check
