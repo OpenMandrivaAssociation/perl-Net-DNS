@@ -1,21 +1,26 @@
-%define modname	Net-DNS
-%define modver 0.81
+%define upstream_name	 Net-DNS
+%define upstream_version 1.15
 
-Summary:	Perl interface to the DNS resolver
+%define __noautoreq 'perl\\(Digest::HMAC\\)|perl\\(Digest::MD5\\)|perl\\(Digest::SHA\\)|perl\\(MIME::Base64\\)|perl\\(CONFIG\\)|perl\\(OS_CONF\\)'
 
-Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	4
-License:	GPLv2+ or Artistic
-Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Net/%{modname}-%{modver}.tar.gz
-BuildRequires:	perl(Digest::HMAC)
-BuildRequires:	perl(Net::IP)
-BuildRequires:	perl(Digest::SHA)
-BuildRequires:	perl(IO::Socket::INET6)
-BuildRequires:	perl(Socket6)
-BuildRequires:	perl-devel
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    1
+Summary:    Perl interface to the DNS resolver
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.gz
+
+BuildRequires: perl(Digest::HMAC) >= 1.10.0
+BuildRequires: perl(Digest::MD5) >= 2.130.0
+BuildRequires: perl(Digest::SHA) >= 5.230.0
+BuildRequires: perl(ExtUtils::MakeMaker)
+BuildRequires: perl(IO::Socket) >= 1.240.0
+BuildRequires: perl(MIME::Base64) >= 2.110.0
+BuildRequires: perl(Test::More) >= 0.520.0
+BuildRequires: perl-devel
+BuildArch:     noarch
 
 %description
 Net::DNS is a collection of Perl modules that act as a Domain Name System (DNS)
@@ -26,13 +31,11 @@ The programmer should be somewhat familiar with the format of a DNS packet and
 its various sections. See RFC 1035 or DNS and BIND (Albitz & Liu) for details.
 
 %prep
-%setup -qn %{modname}-%{modver}
-rm -f lib/Net/DNS/Resolver/MSWin32.pm
-sed -i -e '/MSWin32.pm/d' MANIFEST
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
-%make OPTIMIZE="%{optflags}"
+perl Makefile.PL INSTALLDIRS=vendor < /dev/null
+%make
 
 %check
 %make test
@@ -41,7 +44,6 @@ sed -i -e '/MSWin32.pm/d' MANIFEST
 %makeinstall_std
 
 %files
-%doc README Changes
-%{perl_vendorarch}/auto/Net
-%{perl_vendorarch}/Net
-%{_mandir}/man3/*
+%doc Changes META.yml MYMETA.yml README  demo
+%{_mandir}/*/*
+%{perl_vendorlib}/Net
