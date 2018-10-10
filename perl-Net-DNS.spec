@@ -44,6 +44,6 @@ perl Makefile.PL INSTALLDIRS=vendor < /dev/null
 %makeinstall_std
 
 %files
-%doc Changes META.yml MYMETA.yml README  demo
+%doc Changes *META.yml README  demo
 %{_mandir}/*/*
 %{perl_vendorlib}/Net
