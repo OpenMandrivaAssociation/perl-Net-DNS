@@ -32,7 +32,7 @@ its various sections. See RFC 1035 or DNS and BIND (Albitz & Liu) for details.
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
-sed -i '#/usr/local/bin/perl#/usr/bin/perl#' demo/*
+sed -i 's#/usr/local/bin/perl#/usr/bin/perl#' demo/*
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor < /dev/null
