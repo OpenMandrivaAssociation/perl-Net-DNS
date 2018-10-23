@@ -5,7 +5,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    1
+Release:    2
 Summary:    Perl interface to the DNS resolver
 License:    GPL+ or Artistic
 Group:      Development/Perl
