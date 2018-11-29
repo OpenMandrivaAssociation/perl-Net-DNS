@@ -1,15 +1,2 @@
-removed_sources:
-  Net-DNS-0.68.tar.gz: 4deaaa8ba6bca0cf0e248b4a3cc0383348349182
-  Net-DNS-0.75.tar.gz: e57d08cfe61962d9de3cd78ec705a954e05f36bd
-  Net-DNS-0.76.tar.gz: b4cb71eee79b1fc4946fa089741d5992e1a4f122
-  Net-DNS-0.77.tar.gz: e2264580ba9fa1d13104d41239c317570de9807e
-  Net-DNS-0.79.tar.gz: de0b5a1be91305b733f843447d036a7129e524b6
-  Net-DNS-0.80.tar.gz: 19df370fbdf214c9c51e2385f5c3aa791b347539
-  Net-DNS-0.81.tar.gz: b0f08e555587ccd8a063196db1a57ef1acd818bf
-  Net-DNS-0.83.tar.gz: 1e0f7a3640125c5d7511324e516620ae25cac99f
-  Net-DNS-1.03.tar.gz: e4c79fc288b9fc06c27bbcc9fb48d26ae590492a
-  Net-DNS-1.04.tar.gz: b420a9bf8fdc8f264dde2306746232f9fba191d6
-  Net-DNS-1.06.tar.gz: 1bd2a07cc0cc2b2414f38208a17f9742a0252418
-  Net-DNS-1.10.tar.gz: 02c1009ae2010c7248ad7c749e93bdbd275e6ecc
 sources:
-  Net-DNS-1.15.tar.gz: 41078908786e71fb680d7fb6686062f53b0c760a
+  Net-DNS-1.19.tar.gz: 3df5b6f8abd470eb785d54083c4a95de9adb7f64
