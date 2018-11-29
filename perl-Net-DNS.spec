@@ -1,11 +1,11 @@
 %define upstream_name	 Net-DNS
-%define upstream_version 1.15
+%define upstream_version 1.19
 
 %define __noautoreq 'perl\\(Digest::HMAC\\)|perl\\(Digest::MD5\\)|perl\\(Digest::SHA\\)|perl\\(MIME::Base64\\)|perl\\(CONFIG\\)|perl\\(OS_CONF\\)'
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    3
+Release:    1
 Summary:    Perl interface to the DNS resolver
 License:    GPL+ or Artistic
 Group:      Development/Perl
