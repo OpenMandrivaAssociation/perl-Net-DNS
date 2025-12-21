@@ -12,6 +12,7 @@ Group:      Development/Perl
 Url:        https://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.gz
 
+BuildRequires:	make
 BuildRequires: perl(Digest::HMAC) >= 1.10.0
 BuildRequires: perl(Digest::MD5) >= 2.130.0
 BuildRequires: perl(Digest::SHA) >= 5.230.0
